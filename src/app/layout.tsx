@@ -1,11 +1,12 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Poppins, Titillium_Web } from 'next/font/google';
 
 import { Providers } from './providers';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
+const titillium = Titillium_Web({ subsets: ['latin'], weight: ['600'] });
 
 export const metadata: Metadata = {
     title: 'MDA402 Project Management'
@@ -20,7 +21,7 @@ const RootLayout = async ({
     return (
         <html lang="en">
             <body
-                className={`flex min-h-screen flex-col bg-[#f3f2fe] ${poppins.className}`}
+                className={`flex min-h-screen flex-col bg-[#e30601] ${titillium.className}`}
             >
                 <main className="container">
                     <Providers>{children}</Providers>
